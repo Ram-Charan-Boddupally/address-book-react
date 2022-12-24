@@ -1,0 +1,79 @@
+*{
+    box-sizing:border-box;
+}
+
+html,body {
+    margin:0px;
+    padding:0px;
+}
+
+a:link {
+    text-decoration: none;
+    color:white;
+}
+
+a:visited{
+    text-decoration: none;
+    color:white;
+}
+
+@import url("http://fonts.cdnfonts.com/css/century-gothic-paneuropean");
+/* @import url("http://fonts.cdnfonts.com/css/oslo"); */
+
+/* Header */
+.container {
+    margin: 0px auto;
+    font-family: Arial, sans-serif;
+    font-weight:520;
+    font-size: 0.92em;
+}
+
+.page-title {
+    background-color: rgb(50,152,204);
+    font-family: 'Century Gothic Paneuropean', sans-serif;
+    font-weight: 400;
+    color: whitesmoke;
+    width: 100%;
+    height: max-content;
+    padding: 25px;
+    font-size: 350%;
+}
+
+/* styleing the navigation bar */
+.navigation {
+    background-color: rgba(51,51,51);
+    height: 40px;
+    height: min-content;
+    padding: 12px 8px;
+    font-weight:bolder;
+}
+
+/* setting margin or spacing between elements in naviagation bar */
+.navigation .active{
+    color:rgb(51,51,51);
+    background-color:rgb(255,153,0);
+    border-left: 5px solid white;
+    font-weight: bolder;
+}
+
+.navigation .active:hover{
+    padding: 12px 20px;
+}
+.navigation a:hover{
+    background-color:rgb(255,153,0);
+    color:white;
+    padding: 15px 20px 14px;
+}
+
+.navigation a{
+    padding: 12px 20px;
+    text-align: center;
+    margin-left: -8px;
+}
+
+#blogIcon {
+    margin-left: 25px;
+    position:absolute;
+    right:40px;
+    margin-top:-2px;
+}

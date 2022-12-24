@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;200&display=swap');
+
+.contacts-block{
+    width: 28%;
+    margin-left: 25px; 
+}
+
+.contacts-block h3{
+    font-weight: bolder;
+}
+
+.contacts-list{
+    list-style:none;
+    padding: 2px;
+    font-family: 'Noto Sans', 'sans-serif';
+    /* font-size: 20px; */
+}
+
+.contacts-list li{
+    border: 1px solid #bab9b9;
+    padding: 2px 15px 10px 15px;
+    height: max-content;
+    cursor: pointer;
+}
+
+.contacts-list li:hover{
+    background-color: rgba(207,230,242);
+}
+
+.contacts-list p{
+    padding: 2px 0px;
+    margin: 0px;
+} 
+
+.contact-tile-name{
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+.contact-tile-contact{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.selected{
+    background-color: rgba(207,230,242,0.5);
+}
+
+.contacts-block, .float-right{
+    display: inline-block;
+}

@@ -1,0 +1,59 @@
+/* edit and del option in details block */
+.contact-details{
+    position: absolute;
+    width: 600px;
+    margin: 50px;
+    margin-left: 75px;
+    padding: 10px;
+}
+
+.details-block p span{
+    font-weight: normal;
+}
+
+.contact-detail-options a{
+    text-decoration: none;
+    color: black;
+}
+
+.contact-detail-options{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 8px;
+    cursor: pointer;
+    height: 18px;
+    /* font-size: 120%; */
+}
+
+.contact-information{
+    margin-bottom: 20px;
+}
+
+.mobile-number.contact-information{
+    margin-bottom: 0px;
+}
+
+.user-name.contact-information{
+    margin-bottom: 15px;
+}
+
+.contact-detail-options img{
+    width: 15px;
+    margin-right: 2px;
+    transform: scale(1,0.80);
+    margin-bottom: -2px;
+}
+
+.editContact{
+    margin-right: 30px;
+}
+
+.user-name{
+    margin: 0px;
+    font-size: 35px;
+}
+
+.user-name,.contact-detail-options{
+    display: inline-block;
+}
