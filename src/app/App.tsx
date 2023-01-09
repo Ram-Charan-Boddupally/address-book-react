@@ -16,7 +16,7 @@ function App() {
       contactList = new ContactList(contactListData);
       window.sessionStorage.setItem("contactsList", JSON.stringify(contactList));
     }
-  })
+   })
 
   return (
     <div className='container'>

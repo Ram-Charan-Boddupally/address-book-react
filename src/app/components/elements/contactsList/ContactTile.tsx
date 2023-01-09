@@ -1,36 +1,28 @@
-import React,{Component} from "react";
+import React,{ useState } from "react";
+import { useNavigate } from "react-router";
 import {ContactList} from '../../../../models/contactList';
 
 import { IContactTileProps, IContactTileState } from './IContactTile'
-export default class ConctactTile extends Component<IContactTileProps,IContactTileState>{
-    constructor(props:IContactTileProps){
-        super(props);
 
-        let contacts = ContactList.fromJSON(JSON.parse(window.sessionStorage.getItem("contactsList") as string));
-        let contact = contacts.getContact(this.props.contactId)
-        this.state = {
-            contactId: this.props.contactId,
-            contactName: contact.name,
-            contactEmail: contact.email,
-            contactNumber: contact.contactInformation[0],
-            isClicked: false
-        };
-        
-        this.chickHandler = this.chickHandler.bind(this)
+export default function ConctactTile(props: IContactTileProps){
+    const navigate = useNavigate()
+
+    let contacts = ContactList.fromJSON(JSON.parse(window.sessionStorage.getItem("contactsList") as string));
+    let contact = contacts.getContact(props.contactId)
+    
+    const [tileDetails, setTileDetails] = useState<IContactTileState>({contactId: props.contactId, contactName: contact.name,
+                                              contactEmail: contact.email, contactNumber: contact.contactInformation[0], isClicked: false})
+    
+    function chickHandler(): void{
+        props.onClick()
+        navigate('/Details',{state:{contactId: tileDetails.contactId}});
     }
 
-    private chickHandler(): void{
-        this.props.onClick()
-        this.props.navigate ? this.props.navigate('/Details',{state:{contactId:this.state.contactId}}) : void(0);
-    }
-
-    render(): React.ReactNode {
-        return (
-            <li className={this.props.isClicked? "contact-tile selected":"contact-tile"} key={this.state.contactId} onClick={this.chickHandler}>
-                <p className="contact-tile-name"> {this.state.contactName} </p>
-                <p className="contact-tile-email"> {this.state.contactEmail} </p>
-                <p className="contact-tile-contact"> {this.state.contactNumber} </p>
-            </li>
-        )
-    }
+    return (
+        <li className={props.isClicked? "contact-tile selected":"contact-tile"} key={tileDetails.contactId} onClick={chickHandler}>
+            <p className="contact-tile-name"> {tileDetails.contactName} </p>
+            <p className="contact-tile-email"> {tileDetails.contactEmail} </p>
+            <p className="contact-tile-contact"> {tileDetails.contactNumber} </p>
+        </li>
+    )
 }

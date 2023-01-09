@@ -1,5 +1,3 @@
-import INavigationProps from "../Inavigation"
-
 export interface IContactState{
     name: string;
     email: string;
@@ -11,6 +9,6 @@ export interface IContactState{
     contactId: string;
 }
 
-export interface IContactProps extends INavigationProps{
+export interface IContactProps{
     contactId: string;
 }

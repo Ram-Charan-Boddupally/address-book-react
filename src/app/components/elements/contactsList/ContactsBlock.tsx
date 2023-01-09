@@ -15,7 +15,7 @@ function ContactBlock(){
 
     for(let i=0; i< contacts.getListLength(); i++){
         const clickStatus = contacts.contactList[i].id === activeTile? true : false
-        contactTilesList.push(<ConctactTile contactId={contacts.contactList[i].id} isClicked={clickStatus} onClick={()=>{setActiveTile(contacts.contactList[i].id)}} navigate={useNavigate()}/>)
+        contactTilesList.push(<ConctactTile contactId={contacts.contactList[i].id} isClicked={clickStatus} onClick={()=>{setActiveTile(contacts.contactList[i].id)}} />)
     }
 
     return(

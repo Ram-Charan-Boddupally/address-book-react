@@ -11,12 +11,12 @@ export default function AddContact(){
   if(state.isEdit){
     return(<>
         <ContactsBlock/>
-        <ContactForm isEdit={true} contactId={state.contactId} navigate={useNavigate()}/>
+        <ContactForm isEdit={true} contactId={state.contactId}/>
       </>)
   }else{
     return(<>
             <ContactsBlock/>
-            <ContactForm isEdit={false} navigate={useNavigate()}/>
+            <ContactForm isEdit={false}/>
           </>)
   }        
 }

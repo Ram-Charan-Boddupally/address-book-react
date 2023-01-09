@@ -1,5 +1,3 @@
-import INavigationProps from "../Inavigation"
-
 export interface IContactFormState{
     name: string;
     email: string;
@@ -16,7 +14,7 @@ export interface IContactFormState{
 }
 
 
-export interface IContactFormProps extends INavigationProps{
+export interface IContactFormProps{
     isEdit: Boolean;
     contactId?: string;
 }

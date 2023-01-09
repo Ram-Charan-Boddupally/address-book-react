@@ -1,5 +1,5 @@
 import React from "react";
-import { ContactDetailsBlock } from '../elements/contactDetails/ContactDetails'
+import ContactDetails from '../elements/contactDetails/ContactDetails'
 import ContactsBlock from '../elements/contactsList/ContactsBlock'
 
 export default class DetailsBlock extends React.Component<{},{}>{
@@ -11,7 +11,7 @@ export default class DetailsBlock extends React.Component<{},{}>{
         return(
             <>
                 <ContactsBlock/>
-                <ContactDetailsBlock/>
+                <ContactDetails/>
             </>
         );
     }

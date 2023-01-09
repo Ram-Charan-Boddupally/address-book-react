@@ -1,8 +1,5 @@
-import INavigationProps from "../Inavigation"
-
-export interface IContactTileProps extends INavigationProps{
-    contactId: string;
-    
+export interface IContactTileProps{
+    contactId: string;    
     isClicked: Boolean;
     onClick(): void;
 }
